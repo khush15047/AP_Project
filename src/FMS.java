@@ -180,9 +180,9 @@ public class FMS extends JFrame {
             String command = e.getActionCommand();
             if (command.equals("Login2")) {
                 Text1 = text_log.getText();//getting input from Usernam
-                System.out.println(Text1);
+
                 Text2 = text_pass.getText();//gettig input from Password
-                System.out.println(Text2);
+              
                 panel3 = new JPanel();
                 panel3.setBackground(Color.BLACK);
                 head2 = new JLabel();
