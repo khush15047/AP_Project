@@ -182,7 +182,7 @@ public class FMS extends JFrame {
                 Text1 = text_log.getText();//getting input from Usernam
 
                 Text2 = text_pass.getText();//gettig input from Password
-              
+
                 panel3 = new JPanel();
                 panel3.setBackground(Color.BLACK);
                 head2 = new JLabel();
@@ -252,6 +252,13 @@ public class FMS extends JFrame {
             }
         }
 
+    }
+    class Action5 implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent e){
+
+
+        }
     }
 
 }
