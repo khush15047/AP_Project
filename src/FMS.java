@@ -10,7 +10,7 @@ public class FMS extends JFrame {
     private JFrame frame1, frame2, frame3, frame4;
     private JPanel panel1, panel2, panel3, panel4;
     private JLabel label1, label2, head, head2, head3, label4, label5, label6, label7, label8, label9, label10, label11, lab_log, lab_pass;
-    private JButton Login, one, two, three, four, logout, submit, cancel,Exit, B_Home,Exit1;
+    private JButton Login, one, two, three, four, logout, submit, cancel,Exit, B_Home,Exit1,cancel2;
     private JButton Register, Login2;
     private JTextField textField1, text_log, text_pass, textField2, textField3, textField4, textField5, textField6, textField7, textField8;
     private String Text1, Text2, t3, t4, t5, t6, t7, t8, t9, t10;
@@ -94,8 +94,16 @@ public class FMS extends JFrame {
                 Login2.setForeground(Color.BLUE);
                 panel2.add(Login2);
 
+                JButton Back=new JButton("Back");
+                Back.setBackground(Color.GREEN);
+                Back.setForeground(Color.BLUE);
+                panel2.add(Back);
+
                 Login2.setActionCommand("Login2");
                 Login2.addActionListener(new Action2());
+
+                Back.setActionCommand("cancel2");
+                Back.addActionListener(new Action6());
 
 
                 frame1.add(panel2);
@@ -148,12 +156,18 @@ public class FMS extends JFrame {
                 panel2.add(label11, BorderLayout.EAST);
                 panel2.add(textField8);
                 submit = new JButton("Submit");
-                cancel = new JButton("Cancel");
+                cancel2=new JButton("Back");
+                cancel = new JButton("Exit");
                 submit.setActionCommand("submit");
                 submit.addActionListener(new Action3());
+                cancel2.setActionCommand("cancel2");
+                cancel2.setForeground(Color.blue);
+                cancel2.setBackground(Color.GREEN);
+                cancel2.addActionListener(new Action6());
                 cancel.setActionCommand("cancel");
                 cancel.addActionListener(new Action3());
                 panel2.add(submit);
+                panel2.add(cancel2);
                 panel2.add(cancel);
                 Color();
                 frame1.add(panel2);
@@ -322,6 +336,51 @@ public class FMS extends JFrame {
                 System.exit(0);
             }
         }
+    }
+    class Action6 implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent e){
+            frame1.getContentPane().removeAll();
+            frame1.repaint();
+            String command = e.getActionCommand();
+            if(command.equals("cancel2")){
+                frame1.setSize(500, 300);
+                frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                JPanel panel1 = new JPanel();
+                JLabel label1 = new JLabel();
+                label1.setText("Facility Management Services System");
+                Font myFont = new Font("Comic Sans MS", Font.PLAIN, 27);
+                label1.setFont(myFont);
+                panel1.setBackground(Color.BLACK);
+                label1.setForeground(Color.GREEN);
+                panel1.add(label1);
+                JButton Login = new JButton("Login");
+                Login.setBackground(Color.GREEN);
+                Login.setForeground(Color.BLUE);
+                panel1.add(Login);
+                JButton Register = new JButton("Register");
+                Register.setBackground(Color.GREEN);
+                Register.setForeground(Color.BLUE);
+                panel1.add(Register);
+                frame1.add(panel1);
+                Exit=new JButton("Exit");
+                Exit.setBackground(Color.GREEN);
+                Exit.setForeground(Color.BLUE);
+                panel1.add(Exit);
+                frame1.add(panel1);
+                frame1.setVisible(true);
+                Login.setActionCommand("Login");
+                Login.addActionListener(new Action1());
+
+                Register.setActionCommand("Register");
+                Register.addActionListener(new Action4());
+
+                Exit.setActionCommand("Exit");
+                Exit.addActionListener(new Action4());
+
+            }
+        }
+
     }
 
 }
