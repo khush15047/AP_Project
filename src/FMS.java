@@ -89,7 +89,7 @@ public class FMS extends JFrame {
                 panel2.add(lab_pass, BorderLayout.CENTER);
                 panel2.add(text_pass);
 
-                Login2 = new JButton("LOGIN");
+                Login2 = new JButton("Login");
                 Login2.setBackground(Color.GREEN);
                 Login2.setForeground(Color.BLUE);
                 panel2.add(Login2);
@@ -203,9 +203,7 @@ public class FMS extends JFrame {
             String command = e.getActionCommand();
             if (command.equals("Login2")) {
                 Text1 = text_log.getText();//getting input from Usernam
-
                 Text2 = text_pass.getText();//gettig input from Password
-
                 panel3 = new JPanel();
                 panel3.setBackground(Color.BLACK);
                 head2 = new JLabel();
@@ -229,11 +227,7 @@ public class FMS extends JFrame {
                 three.setForeground(Color.BLUE);
                 four.setForeground(Color.BLUE);
                 logout.setForeground(Color.BLUE);
-                one.setActionCommand("Home");
-                two.setActionCommand("Staff");
-                three.setActionCommand("Logistics");
-                four.setActionCommand("Report");
-                logout.setActionCommand("Logout");
+                call();
                 panel3.add(one);
                 panel3.add(two);
                 panel3.add(three);
@@ -242,6 +236,18 @@ public class FMS extends JFrame {
                 frame1.add(panel3);
                 frame1.setVisible(true);
             }
+        }
+        public void call(){
+            one.setActionCommand("Home");
+            two.setActionCommand("Staff");
+            three.setActionCommand("Logistics");
+            four.setActionCommand("Report");
+            logout.setActionCommand("Logout");
+            one.addActionListener(new Action7());
+            two.addActionListener(new Action7());
+            three.addActionListener(new Action7());
+            four.addActionListener(new Action7());
+            logout.addActionListener(new Action7());
         }
     }
 
@@ -377,8 +383,18 @@ public class FMS extends JFrame {
 
                 Exit.setActionCommand("Exit");
                 Exit.addActionListener(new Action4());
-
             }
+        }
+
+    }
+
+    class Action7 implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent e){
+            frame1.getContentPane().removeAll();
+            frame1.repaint();
+            String command = e.getActionCommand();
+
         }
 
     }
