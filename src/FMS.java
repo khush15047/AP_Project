@@ -10,7 +10,7 @@ public class FMS extends JFrame {
     private JFrame frame1, frame2, frame3, frame4;
     private JPanel panel1, panel2, panel3, panel4;
     private JLabel label1, label2, head, head2, head3, label4, label5, label6, label7, label8, label9, label10, label11, lab_log, lab_pass;
-    private JButton Login, one, two, three, four, logout, submit, cancel,Exit;
+    private JButton Login, one, two, three, four, logout, submit, cancel,Exit, B_Home,Exit1;
     private JButton Register, Login2;
     private JTextField textField1, text_log, text_pass, textField2, textField3, textField4, textField5, textField6, textField7, textField8;
     private String Text1, Text2, t3, t4, t5, t6, t7, t8, t9, t10;
@@ -250,10 +250,26 @@ public class FMS extends JFrame {
                 panel4.setBackground(Color.BLACK);
                 head3 = new JLabel();
                 head3.setText("YOU ARE SUCCESSFULLY REGISTERED!");
-                Font myFont = new Font("Comic Sans MS", Font.PLAIN, 20);
+                Font myFont = new Font("Comic Sans MS", Font.PLAIN, 22);
                 head3.setFont(myFont);
                 head3.setForeground(Color.CYAN);
+               B_Home=new JButton("Home");
+                B_Home.setForeground(Color.BLUE);
+                B_Home.setBackground(Color.GREEN);
+
+              Exit1=new JButton("Cancel");
+                Exit1.setForeground(Color.BLUE);
+                Exit1.setBackground(Color.GREEN);
+
+                B_Home.setActionCommand("Home");
+                B_Home.addActionListener(new Action5());
+
+                Exit1.setActionCommand("Cancel");
+                Exit1.addActionListener(new Action5());
+
                 panel4.add(head3);
+                panel4.add(B_Home);
+                panel4.add(Exit1);
                 frame1.add(panel4);
                 frame1.setVisible(true);
             } else {
@@ -269,8 +285,41 @@ public class FMS extends JFrame {
             frame1.repaint();
             String command = e.getActionCommand();
             if (command.equals("Home")){
+                frame1.setSize(500, 300);
+                frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                JPanel panel1 = new JPanel();
+                JLabel label1 = new JLabel();
+                label1.setText("Facility Management Services System");
+                Font myFont = new Font("Comic Sans MS", Font.PLAIN, 27);
+                label1.setFont(myFont);
+                panel1.setBackground(Color.BLACK);
+                label1.setForeground(Color.GREEN);
+                panel1.add(label1);
+                JButton Login = new JButton("Login");
+                Login.setBackground(Color.GREEN);
+                Login.setForeground(Color.BLUE);
+                panel1.add(Login);
+                JButton Register = new JButton("Register");
+                Register.setBackground(Color.GREEN);
+                Register.setForeground(Color.BLUE);
+                panel1.add(Register);
+                frame1.add(panel1);
+                Exit=new JButton("Exit");
+                Exit.setBackground(Color.GREEN);
+                Exit.setForeground(Color.BLUE);
+                panel1.add(Exit);
+                frame1.add(panel1);
+                frame1.setVisible(true);
+                Login.setActionCommand("Login");
+                Login.addActionListener(new Action1());
 
+                Register.setActionCommand("Register");
+                Register.addActionListener(new Action4());
 
+                Exit.setActionCommand("Exit");
+                Exit.addActionListener(new Action4());
+            }else{
+                System.exit(0);
             }
         }
     }
