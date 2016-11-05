@@ -10,7 +10,7 @@ public class FMS extends JFrame {
     private JFrame frame1, frame2, frame3, frame4;
     private JPanel panel1, panel2, panel3, panel4;
     private JLabel label1, label2, head, head2, head3, label4, label5, label6, label7, label8, label9, label10, label11, lab_log, lab_pass;
-    private JButton Login, one, two, three, four, logout, submit, cancel;
+    private JButton Login, one, two, three, four, logout, submit, cancel,Exit;
     private JButton Register, Login2;
     private JTextField textField1, text_log, text_pass, textField2, textField3, textField4, textField5, textField6, textField7, textField8;
     private String Text1, Text2, t3, t4, t5, t6, t7, t8, t9, t10;
@@ -37,13 +37,20 @@ public class FMS extends JFrame {
         Register.setForeground(Color.BLUE);
         panel1.add(Register);
         frame1.add(panel1);
+        Exit=new JButton("Exit");
+        Exit.setBackground(Color.GREEN);
+        Exit.setForeground(Color.BLUE);
+        panel1.add(Exit);
+        frame1.add(panel1);
         frame1.setVisible(true);
         Login.setActionCommand("Login");
-
         Login.addActionListener(new Action1());
 
         Register.setActionCommand("Register");
         Register.addActionListener(new Action4());
+
+        Exit.setActionCommand("Exit");
+        Exit.addActionListener(new Action4());
     }
 
     /**
@@ -151,6 +158,8 @@ public class FMS extends JFrame {
                 Color();
                 frame1.add(panel2);
                 frame1.setVisible(true);
+            }else{
+                System.exit(0);
             }
         }
 
@@ -256,8 +265,13 @@ public class FMS extends JFrame {
     class Action5 implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e){
+            frame1.getContentPane().removeAll();
+            frame1.repaint();
+            String command = e.getActionCommand();
+            if (command.equals("Home")){
 
 
+            }
         }
     }
 
