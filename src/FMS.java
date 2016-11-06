@@ -72,7 +72,7 @@ public class FMS extends JFrame {
                 panel2.setBackground(Color.BLACK);
                 head = new JLabel();
                 head.setText("USER LOGIN");
-                Font myFont = new Font("Comic Sans MS", Font.PLAIN, 77);
+                Font myFont = new Font("Comic Sans MS", Font.PLAIN, 66);
                 head.setFont(myFont);
                 head.setForeground(Color.GREEN);
                 panel2.add(head);
@@ -394,7 +394,32 @@ public class FMS extends JFrame {
             frame1.getContentPane().removeAll();
             frame1.repaint();
             String command = e.getActionCommand();
-
+            if(command.equals("Logout")){
+                frame1.setSize(500, 300);
+                frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                JPanel panel10=new JPanel();
+                panel10.setBackground(Color.BLACK);
+                JLabel label10=new JLabel();
+                label10.setForeground(Color.CYAN);
+                label10.setText("YOU ARE SUCCESSFULLY LOGGED OUT!");
+                Font myFont = new Font("Comic Sans MS", Font.PLAIN, 22);
+                label10.setFont(myFont);
+                 JButton cancel3=new JButton("Home");
+                cancel3.setBackground(Color.GREEN);
+                cancel3.setForeground(Color.blue);
+                cancel3.setActionCommand("cancel3");
+             //   cancel3.addActionListener(new Action8());
+                JButton exit3=new JButton("Exit");
+                exit3.setBackground(Color.GREEN);
+                exit3.setForeground(Color.blue);
+                exit3.setActionCommand("exit3");
+              //  exit3.addActionListener(new Action8());
+                panel10.add(label10);
+                panel10.add(cancel3);
+                panel10.add(exit3);
+                frame1.add(panel10);
+                frame1.setVisible(true);
+            }
         }
 
     }
