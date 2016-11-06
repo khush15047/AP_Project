@@ -149,14 +149,7 @@ public class FMS extends JFrame {
                 cancel2=new JButton("Back");
                 cancel = new JButton("Exit");
                 cancel2.setForeground(Color.blue);
-                cancel2.setBackground(Color.GREEN);
-                submit.setActionCommand("submit");
-                cancel2.setActionCommand("cancel2");
-                cancel.setActionCommand("cancel");
-                submit.addActionListener(new Action3());
-                cancel2.addActionListener(new Action6());
-                cancel.addActionListener(new Action3());
-                //YO();
+                cancel2.setBackground(Color.GREEN);YO();
                 panel2.add(submit);panel2.add(cancel2);
                 panel2.add(cancel);Color();frame1.add(panel2);frame1.setVisible(true);
             }else{
@@ -178,14 +171,14 @@ public class FMS extends JFrame {
             label10.setForeground(Color.GREEN);
             label11.setForeground(Color.GREEN);
         }
-   /*     public void YO(){
+        public void YO(){
             submit.setActionCommand("submit");
             cancel2.setActionCommand("cancel2");
             cancel.setActionCommand("cancel");
             submit.addActionListener(new Action3());
             cancel2.addActionListener(new Action6());
             cancel.addActionListener(new Action3());
-        }*/
+        }
 
     }
 
