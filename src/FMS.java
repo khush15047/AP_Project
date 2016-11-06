@@ -455,9 +455,9 @@ public class FMS extends JFrame {
                 Register.addActionListener(new Action4());
                 Exit.setActionCommand("Exit");
                 Exit.addActionListener(new Action4());
-            }//else{
-             //   System.exit(0);
-           // }
+            }else{
+                System.exit(0);
+           }
         }
 
     }
