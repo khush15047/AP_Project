@@ -424,4 +424,18 @@ public class FMS extends JFrame {
 
     }
 
+    class Action8 implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent e){
+            frame1.getContentPane().removeAll();
+            frame1.repaint();
+            String command = e.getActionCommand();
+            if(command.equals("cancel3")){
+
+
+            }
+        }
+
+    }
+
 }
