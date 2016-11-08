@@ -112,24 +112,24 @@ public class FMS extends JFrame {
             if (command.equals("Register")) {
                 JPanel panel2 = new JPanel();
                 panel2.setBackground(Color.BLACK);
-                label4 = new JLabel("   ID              ");
+                label4 = new JLabel("   ID                  ");
                 textField1 = new JTextField(34);
                 textField1.setBounds(50, 10, 20, 10);
                 panel2.add(label4, BorderLayout.EAST);
                 panel2.add(textField1);
-                label5 = new JLabel("   TYPE          ");
+                label5 = new JLabel("   TYPE            ");
                 textField2 = new JTextField(34);
                 panel2.add(label5, BorderLayout.CENTER);
                 panel2.add(textField2);
-                label6 = new JLabel("  NAME          ");
+                label6 = new JLabel("  NAME            ");
                 textField3 = new JTextField(34);
                 panel2.add(label6, BorderLayout.EAST);
                 panel2.add(textField3);
-                label7 = new JLabel("USERNAME  ");
+                label7 = new JLabel("USERNAME    ");
                 textField4 = new JTextField(34);
                 panel2.add(label7, BorderLayout.EAST);
                 panel2.add(textField4);
-                label8 = new JLabel("PASSWORD  ");
+                label8 = new JLabel("PASSWORD   ");
                 textField5 = new JTextField(34);
                 panel2.add(label8, BorderLayout.EAST);
                 panel2.add(textField5);
@@ -172,6 +172,7 @@ public class FMS extends JFrame {
             label11.setForeground(Color.GREEN);
         }
         public void YO(){
+
             submit.setActionCommand("submit");
             cancel2.setActionCommand("cancel2");
             cancel.setActionCommand("cancel");
@@ -231,7 +232,7 @@ public class FMS extends JFrame {
             four.setActionCommand("Report");
             logout.setActionCommand("Logout");
          //   one.addActionListener(new Action7());
-           // two.addActionListener(new Action7());
+           // two.addActionListener(new Action9());
             //three.addActionListener(new Action7());
             //four.addActionListener(new Action7());
             logout.addActionListener(new Action7());
@@ -454,5 +455,18 @@ public class FMS extends JFrame {
         }
 
     }
+
+    class Action9 implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent e){
+            frame1.getContentPane().removeAll();frame1.repaint();
+            String command = e.getActionCommand();
+
+
+        }
+
+
+    }
+
 
 }
