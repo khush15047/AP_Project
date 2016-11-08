@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+
 /**
  *
  * @author khushvinder
@@ -9,10 +11,10 @@ import java.awt.event.ActionListener;
 public class FMS extends JFrame {
     private JFrame frame1, frame2, frame3, frame4;
     private JPanel panel1, panel2, panel3, panel4;
-    private JLabel label1, label2, head, head2, head3, label4, label5, label6, label7, label8, label9, label10, label11, lab_log, lab_pass;
-    private JButton Login, one, two, three, four, logout, submit, cancel,Exit, B_Home,Exit1,cancel2;
+    private JLabel label1, label2, head, head2, head3, name1,name2,name3,name4,label4, label5, label6, label7, label8, label9, label10, label11, lab_log, lab_pass;
+    private JButton Login, one, two, fi,three, four, logout, submit, cancel,Exit, B_Home,Exit1,cancel2;
     private JButton Register, Login2;
-    private JTextField textField1, text_log, text_pass, textField2, textField3, textField4, textField5, textField6, textField7, textField8;
+    private JTextField text1,text2,text3,text4,textField1, text_log, text_pass, textField2, textField3, textField4, textField5, textField6, textField7, textField8;
     private String Text1, Text2, t3, t4, t5, t6, t7, t8, t9, t10;
 
     //constructor
@@ -232,7 +234,7 @@ public class FMS extends JFrame {
             four.setActionCommand("Report");
             logout.setActionCommand("Logout");
          //   one.addActionListener(new Action7());
-           // two.addActionListener(new Action9());
+           two.addActionListener(new Action9());
             //three.addActionListener(new Action7());
             //four.addActionListener(new Action7());
             logout.addActionListener(new Action7());
@@ -461,7 +463,47 @@ public class FMS extends JFrame {
         public void actionPerformed(ActionEvent e){
             frame1.getContentPane().removeAll();frame1.repaint();
             String command = e.getActionCommand();
-
+            if(command.equals("Staff")){
+                frame1.setSize(500, 300);
+                frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                JPanel panel20=new JPanel();
+                panel20.setBackground(Color.BLACK);
+                JLabel label20=new JLabel();
+                label20.setText("          Staff Stats          ");
+                Font myFont = new Font("Comic Sans MS", Font.PLAIN, 38);
+                label20.setFont(myFont);
+                label20.setForeground(Color.GREEN);
+                JRadioButton elec = new JRadioButton("Electricity");
+                elec.setMnemonic(KeyEvent.VK_B);
+                elec.setActionCommand("elec");elec.setBackground(Color.BLACK);elec.setForeground(Color.GREEN);
+                JRadioButton hvac = new JRadioButton("HVAC");
+                hvac.setMnemonic(KeyEvent.VK_B);
+                hvac.setActionCommand("hvac");hvac.setBackground(Color.BLACK);hvac.setForeground(Color.GREEN);
+                JRadioButton sec = new JRadioButton("Security");
+                sec.setMnemonic(KeyEvent.VK_B);
+                sec.setActionCommand("sec");sec.setBackground(Color.BLACK);sec.setForeground(Color.GREEN);
+                JRadioButton hk = new JRadioButton("Housekeeping");
+                hk.setMnemonic(KeyEvent.VK_B);
+                hk.setActionCommand("hk");hk.setBackground(Color.BLACK);hk.setForeground(Color.GREEN);
+                JRadioButton AV = new JRadioButton("Audio/Video");
+                AV.setMnemonic(KeyEvent.VK_B);
+                AV.setActionCommand("AV");AV.setBackground(Color.BLACK);AV.setForeground(Color.GREEN);
+                name1=new JLabel("Supervisor Name:");name1.setForeground(Color.GREEN);text1=new JTextField(32);text1.setBackground(Color.BLACK);text1.setForeground(Color.GREEN);
+                name2=new JLabel("           Total Staff  :");name2.setForeground(Color.GREEN);text2=new JTextField(32);text2.setBackground(Color.BLACK);text2.setForeground(Color.GREEN);
+                name3=new JLabel("Staff On Leave:    ");name3.setForeground(Color.GREEN);text3=new JTextField(32);text3.setBackground(Color.BLACK);text3.setForeground(Color.GREEN);
+                name4=new JLabel("Staff Available:     ");name4.setForeground(Color.GREEN);text4=new JTextField(32);text4.setBackground(Color.BLACK);text4.setForeground(Color.GREEN);
+                panel20.add(label20);panel20.add(elec);
+                panel20.add(hvac);panel20.add(sec);
+                panel20.add(hk);panel20.add(AV);
+                panel20.add(name1);panel20.add(text1);
+                panel20.add(name2);panel20.add(text2);
+                panel20.add(name3);panel20.add(text3);
+                panel20.add(name4);panel20.add(text4);
+                fi=new JButton("Back");fi.setBackground(Color.GREEN);fi.setForeground(Color.blue);fi.setActionCommand("fi");//fi.addActionListener(new Action10() );
+               panel20.add(fi);
+                frame1.add(panel20);
+                frame1.setVisible(true);
+            }
 
         }
 
