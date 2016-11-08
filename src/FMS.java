@@ -115,36 +115,35 @@ public class FMS extends JFrame {
                 JPanel panel2 = new JPanel();
                 panel2.setBackground(Color.BLACK);
                 label4 = new JLabel("   ID                  ");
-                textField1 = new JTextField(34);
-                textField1.setBounds(50, 10, 20, 10);
+                textField1 = new JTextField(34);textField1.setBackground(Color.BLACK);textField1.setForeground(Color.GREEN);
                 panel2.add(label4, BorderLayout.EAST);
                 panel2.add(textField1);
                 label5 = new JLabel("   TYPE            ");
-                textField2 = new JTextField(34);
+                textField2 = new JTextField(34);textField2.setBackground(Color.BLACK);textField2.setForeground(Color.GREEN);
                 panel2.add(label5, BorderLayout.CENTER);
                 panel2.add(textField2);
                 label6 = new JLabel("  NAME            ");
-                textField3 = new JTextField(34);
+                textField3 = new JTextField(34);textField3.setBackground(Color.BLACK);textField3.setForeground(Color.GREEN);
                 panel2.add(label6, BorderLayout.EAST);
                 panel2.add(textField3);
                 label7 = new JLabel("USERNAME    ");
-                textField4 = new JTextField(34);
+                textField4 = new JTextField(34);textField4.setBackground(Color.BLACK);textField4.setForeground(Color.GREEN);
                 panel2.add(label7, BorderLayout.EAST);
                 panel2.add(textField4);
                 label8 = new JLabel("PASSWORD   ");
-                textField5 = new JTextField(34);
+                textField5 = new JTextField(34);textField5.setBackground(Color.BLACK);textField5.setForeground(Color.GREEN);
                 panel2.add(label8, BorderLayout.EAST);
                 panel2.add(textField5);
                 label9 = new JLabel(" DOB                 ");
-                textField6 = new JTextField(34);
+                textField6 = new JTextField(34);textField6.setBackground(Color.BLACK);textField6.setForeground(Color.GREEN);
                 panel2.add(label9, BorderLayout.EAST);
                 panel2.add(textField6);
                 label10 = new JLabel("ADDRESS        ");
-                textField7 = new JTextField(34);
+                textField7 = new JTextField(34);textField7.setBackground(Color.BLACK);textField6.setForeground(Color.GREEN);
                 panel2.add(label10, BorderLayout.EAST);
                 panel2.add(textField7);
                 label11 = new JLabel("DEPARTMENT");
-                textField8 = new JTextField(34);
+                textField8 = new JTextField(34);textField8.setBackground(Color.BLACK);textField8.setForeground(Color.GREEN);
                 panel2.add(label11, BorderLayout.EAST);
                 panel2.add(textField8);
                 submit = new JButton("Submit");
@@ -207,11 +206,11 @@ public class FMS extends JFrame {
                 three = new JButton("Logistics");
                 four = new JButton("Report");
                 logout = new JButton("Logout");
-                one.setBackground(Color.GREEN);
-                two.setBackground(Color.GREEN);
-                three.setBackground(Color.GREEN);
-                four.setBackground(Color.GREEN);
-                logout.setBackground(Color.ORANGE);
+                one.setBackground(Color.WHITE);
+                two.setBackground(Color.WHITE);
+                three.setBackground(Color.WHITE);
+                four.setBackground(Color.WHITE);
+                logout.setBackground(Color.CYAN);
                 one.setForeground(Color.BLUE);
                 two.setForeground(Color.BLUE);
                 three.setForeground(Color.BLUE);
@@ -499,12 +498,70 @@ public class FMS extends JFrame {
                 panel20.add(name2);panel20.add(text2);
                 panel20.add(name3);panel20.add(text3);
                 panel20.add(name4);panel20.add(text4);
-                fi=new JButton("Back");fi.setBackground(Color.GREEN);fi.setForeground(Color.blue);fi.setActionCommand("fi");//fi.addActionListener(new Action10() );
-               panel20.add(fi);
+                fi=new JButton("Back");fi.setBackground(Color.GREEN);fi.setForeground(Color.blue);fi.setActionCommand("fi");fi.addActionListener(new Action10() );
+                panel20.add(fi);
                 frame1.add(panel20);
                 frame1.setVisible(true);
             }
 
+        }
+
+
+    }
+
+    class Action10 implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent e){
+            frame1.getContentPane().removeAll();frame1.repaint();
+            String command = e.getActionCommand();
+            if(command.equals("fi")){
+                Text1 = text_log.getText();//getting input from Usernam
+                Text2 = text_pass.getText();//gettig input from Password
+                panel3 = new JPanel();
+                panel3.setBackground(Color.BLACK);
+                head2 = new JLabel();
+                head2.setText("Admin");
+                Font myFont = new Font("Comic Sans MS", Font.PLAIN, 20);
+                head2.setFont(myFont);
+                head2.setForeground(Color.CYAN);
+                panel3.add(head2);
+                one = new JButton("Home");
+                two = new JButton("Staff");
+                three = new JButton("Logistics");
+                four = new JButton("Report");
+                logout = new JButton("Logout");
+                one.setBackground(Color.WHITE);
+                two.setBackground(Color.WHITE);
+                three.setBackground(Color.WHITE);
+                four.setBackground(Color.WHITE);
+                logout.setBackground(Color.CYAN);
+                one.setForeground(Color.BLUE);
+                two.setForeground(Color.BLUE);
+                three.setForeground(Color.BLUE);
+                four.setForeground(Color.BLUE);
+                logout.setForeground(Color.BLUE);
+                call();
+                panel3.add(one);
+                panel3.add(two);
+                panel3.add(three);
+                panel3.add(four);
+                panel3.add(logout);
+                frame1.add(panel3);
+                frame1.setVisible(true);
+            }
+
+        }
+        public void call(){
+            one.setActionCommand("Home");
+            two.setActionCommand("Staff");
+            three.setActionCommand("Logistics");
+            four.setActionCommand("Report");
+            logout.setActionCommand("Logout");
+            //   one.addActionListener(new Action7());
+            two.addActionListener(new Action9());
+            //three.addActionListener(new Action7());
+            //four.addActionListener(new Action7());
+            logout.addActionListener(new Action7());
         }
 
 
