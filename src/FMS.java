@@ -982,7 +982,7 @@ public class FMS extends JFrame {
                      fi.setBackground(Color.GREEN);
                      fi.setForeground(Color.blue);
                      fi.setActionCommand("fi");
-                   //  fi.addActionListener(new Action10());
+                     fi.addActionListener(new Action10());
                      panel20.add(fi);
                      frame1.add(panel20);
                      frame1.setVisible(true);
