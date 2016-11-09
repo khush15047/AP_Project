@@ -12,8 +12,9 @@ public class FMS extends JFrame {
     private JFrame frame1, frame2, frame3, frame4;
     private JPanel panel1, panel2, panel3, panel4;
     private JLabel label1, label2, head, head2, head3, name1,name2,name3,name4,label4, label5, label6, label7, label8, label9, label10, label11, lab_log, lab_pass;
-    private JButton Login, one, two, fi,three, four, logout, submit, cancel,Exit, B_Home,Exit1,cancel2;
+    private JButton Login,  fi,logout, submit, cancel,Exit, B_Home,Exit1,cancel2;
     private JButton Register, Login2;
+    JRadioButton one,two,three,four;
     private JTextField text1,text2,text3,text4,textField1, text_log, text_pass, textField2, textField3, textField4, textField5, textField6, textField7, textField8;
     private String Text1, Text2, t3, t4, t5, t6, t7, t8, t9, t10;
 
@@ -69,7 +70,7 @@ public class FMS extends JFrame {
             frame1.getContentPane().removeAll();
             frame1.repaint();
             String command = e.getActionCommand();
-            if (command.equals("Login")) {
+            if  (command.equals("Login")) {
                 JPanel panel2 = new JPanel();
                 panel2.setBackground(Color.BLACK);
                 head = new JLabel();
@@ -196,26 +197,20 @@ public class FMS extends JFrame {
                 panel3 = new JPanel();
                 panel3.setBackground(Color.BLACK);
                 head2 = new JLabel();
-                head2.setText("Admin");
+                head2.setText("                               Admin                                   ");
                 Font myFont = new Font("Comic Sans MS", Font.PLAIN, 20);
                 head2.setFont(myFont);
                 head2.setForeground(Color.CYAN);
                 panel3.add(head2);
-                one = new JButton("Home");
-                two = new JButton("Staff");
-                three = new JButton("Logistics");
-                four = new JButton("Report");
-                logout = new JButton("Logout");
-                one.setBackground(Color.WHITE);
-                two.setBackground(Color.WHITE);
-                three.setBackground(Color.WHITE);
-                four.setBackground(Color.WHITE);
-                logout.setBackground(Color.CYAN);
-                one.setForeground(Color.BLUE);
-                two.setForeground(Color.BLUE);
-                three.setForeground(Color.BLUE);
-                four.setForeground(Color.BLUE);
-                logout.setForeground(Color.BLUE);
+                one = new JRadioButton("Home");one.setMnemonic(KeyEvent.VK_B);
+               one.setBackground(Color.BLACK);one.setForeground(Color.GREEN);
+                two = new JRadioButton("Staff");two.setMnemonic(KeyEvent.VK_B);
+               two.setBackground(Color.BLACK);two.setForeground(Color.GREEN);
+                 three = new JRadioButton("Logistics");three.setMnemonic(KeyEvent.VK_B);
+              three.setBackground(Color.BLACK);three.setForeground(Color.GREEN);
+                 four = new JRadioButton("Report");four.setMnemonic(KeyEvent.VK_B);
+              four.setBackground(Color.BLACK);four.setForeground(Color.GREEN);
+                logout = new JButton("Logout");logout.setBackground(Color.CYAN);logout.setForeground(Color.blue);
                 call();
                 panel3.add(one);
                 panel3.add(two);
@@ -232,7 +227,7 @@ public class FMS extends JFrame {
             three.setActionCommand("Logistics");
             four.setActionCommand("Report");
             logout.setActionCommand("Logout");
-         //   one.addActionListener(new Action7());
+           one.addActionListener(new Action10());
            two.addActionListener(new Action9());
             //three.addActionListener(new Action7());
             //four.addActionListener(new Action7());
@@ -515,30 +510,26 @@ public class FMS extends JFrame {
             frame1.getContentPane().removeAll();frame1.repaint();
             String command = e.getActionCommand();
             if(command.equals("fi")){
-                Text1 = text_log.getText();//getting input from Usernam
+                Text1 = text_log.getText();//getting input from Username
                 Text2 = text_pass.getText();//gettig input from Password
                 panel3 = new JPanel();
                 panel3.setBackground(Color.BLACK);
                 head2 = new JLabel();
-                head2.setText("Admin");
+                head2.setText("                                   Admin                                ");
                 Font myFont = new Font("Comic Sans MS", Font.PLAIN, 20);
                 head2.setFont(myFont);
                 head2.setForeground(Color.CYAN);
                 panel3.add(head2);
-                one = new JButton("Home");
-                two = new JButton("Staff");
-                three = new JButton("Logistics");
-                four = new JButton("Report");
+                one = new JRadioButton("Home");one.setMnemonic(KeyEvent.VK_B);
+                one.setBackground(Color.BLACK);one.setForeground(Color.GREEN);
+                two = new JRadioButton("Staff");two.setMnemonic(KeyEvent.VK_B);
+                two.setBackground(Color.BLACK);two.setForeground(Color.GREEN);
+                three = new JRadioButton("Logistics");three.setMnemonic(KeyEvent.VK_B);
+                three.setBackground(Color.BLACK);three.setForeground(Color.GREEN);
+                four = new JRadioButton("Report");four.setMnemonic(KeyEvent.VK_B);
+                four.setBackground(Color.BLACK);four.setForeground(Color.GREEN);
                 logout = new JButton("Logout");
-                one.setBackground(Color.WHITE);
-                two.setBackground(Color.WHITE);
-                three.setBackground(Color.WHITE);
-                four.setBackground(Color.WHITE);
                 logout.setBackground(Color.CYAN);
-                one.setForeground(Color.BLUE);
-                two.setForeground(Color.BLUE);
-                three.setForeground(Color.BLUE);
-                four.setForeground(Color.BLUE);
                 logout.setForeground(Color.BLUE);
                 call();
                 panel3.add(one);
@@ -562,6 +553,17 @@ public class FMS extends JFrame {
             //three.addActionListener(new Action7());
             //four.addActionListener(new Action7());
             logout.addActionListener(new Action7());
+        }
+
+
+    }
+
+    class Action11 implements  ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent e){
+            frame1.getContentPane().removeAll();frame1.repaint();
+            String command = e.getActionCommand();
+
         }
 
 
