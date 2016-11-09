@@ -227,7 +227,7 @@ public class FMS extends JFrame {
             three.setActionCommand("Logistics");
             four.setActionCommand("Report");
             logout.setActionCommand("Logout");
-           one.addActionListener(new Action10());
+           one.addActionListener(new Action11());
            two.addActionListener(new Action9());
             //three.addActionListener(new Action7());
             //four.addActionListener(new Action7());
@@ -563,7 +563,20 @@ public class FMS extends JFrame {
         public void actionPerformed(ActionEvent e){
             frame1.getContentPane().removeAll();frame1.repaint();
             String command = e.getActionCommand();
+            if(command.equals("Home")){
+                frame1.setSize(500, 300);
+                frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                JPanel panel21=new JPanel();
+                panel21.setBackground(Color.BLACK);
+                JLabel label21=new JLabel("Home");
+                Font myFont = new Font("Comic Sans MS", Font.PLAIN, 38);
+                label21.setFont(myFont);
+                label21.setForeground(Color.GREEN);
 
+                panel21.add(label21);
+                frame1.add(panel21);
+                frame1.setVisible(true);
+            }
         }
 
 
