@@ -101,7 +101,7 @@ public class FMS extends JFrame {
                 Back.setForeground(Color.BLUE);
                 panel2.add(Back);
                 Login2.setActionCommand("Login2");
-                Login2.addActionListener(new Action13());
+                Login2.addActionListener(new Action18());
                 Back.setActionCommand("cancel2");
                 Back.addActionListener(new Action6());
                 frame1.add(panel2);
@@ -925,7 +925,7 @@ public class FMS extends JFrame {
              four.setActionCommand("Report");
              logout.setActionCommand("Logout");
              one.addActionListener(new Action14());
-             two.addActionListener(new Action9());
+             two.addActionListener(new Action16());
              //three.addActionListener(new Action7());
              //four.addActionListener(new Action7());
              logout.addActionListener(new Action7());
@@ -982,13 +982,169 @@ public class FMS extends JFrame {
                      fi.setBackground(Color.GREEN);
                      fi.setForeground(Color.blue);
                      fi.setActionCommand("fi");
-                     fi.addActionListener(new Action10());
+                     fi.addActionListener(new Action17());
                      panel20.add(fi);
                      frame1.add(panel20);
                      frame1.setVisible(true);
                  }
 
              }
+         }
+
+         class Action17 implements ActionListener{
+             @Override
+             public void actionPerformed(ActionEvent e){
+                 frame1.getContentPane().removeAll();
+                 frame1.repaint();
+                 String command = e.getActionCommand();
+                 if(command.equals("fi")){
+                     frame1.setSize(500, 300);
+                     frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                     Text1 = text_log.getText();//getting input from Username
+                     Text2 = text_pass.getText();//gettig input from Password
+                     panel3 = new JPanel();
+                     panel3.setBackground(Color.BLACK);
+                     head2 = new JLabel();
+                     head2.setText("                               Supervisor                                  ");
+                     Font myFont = new Font("Comic Sans MS", Font.PLAIN, 20);
+                     head2.setFont(myFont);
+                     head2.setForeground(Color.CYAN);
+                     panel3.add(head2);
+                     one = new JRadioButton("Home");
+                     one.setMnemonic(KeyEvent.VK_B);
+                     one.setBackground(Color.BLACK);
+                     one.setForeground(Color.GREEN);
+                     two = new JRadioButton("Staff");
+                     two.setMnemonic(KeyEvent.VK_B);
+                     two.setBackground(Color.BLACK);
+                     two.setForeground(Color.GREEN);
+                     three = new JRadioButton("Logistics");
+                     three.setMnemonic(KeyEvent.VK_B);
+                     three.setBackground(Color.BLACK);
+                     three.setForeground(Color.GREEN);
+                     four = new JRadioButton("Report");
+                     four.setMnemonic(KeyEvent.VK_B);
+                     four.setBackground(Color.BLACK);
+                     four.setForeground(Color.GREEN);
+                     logout = new JButton("Logout");
+                     logout.setBackground(Color.CYAN);
+                     logout.setForeground(Color.blue);
+                     call();
+                     panel3.add(one);
+                     panel3.add(two);
+                     panel3.add(three);
+                     panel3.add(four);
+                     panel3.add(logout);
+                     frame1.add(panel3);
+                     frame1.setVisible(true);
+
+                 }
+
+             }
+             public void call() {
+                 one.setActionCommand("Home");
+                 two.setActionCommand("Staff");
+                 three.setActionCommand("Logistics");
+                 four.setActionCommand("Report");
+                 logout.setActionCommand("Logout");
+                 one.addActionListener(new Action14());
+                 two.addActionListener(new Action16());
+                 //three.addActionListener(new Action7());
+                 //four.addActionListener(new Action7());
+                 logout.addActionListener(new Action7());
+             }
+
+         }
+
+         class Action18 implements ActionListener{
+             @Override
+             public void actionPerformed(ActionEvent e){
+                 frame1.getContentPane().removeAll();
+                 frame1.repaint();
+                 String command = e.getActionCommand();
+                 if(command.equals("Login2")){
+                     frame1.setSize(500, 300);
+                     frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                     JPanel panel25=new JPanel();
+                     panel25.setBackground(Color.BLACK);
+                     JLabel label25=new JLabel();
+                     label25.setText("                             Staff                       ");
+                     Font myFont = new Font("Comic Sans MS", Font.PLAIN, 20);
+                     label25.setFont(myFont);
+                     label25.setForeground(Color.CYAN);
+                     panel25.add(label25);
+                     JRadioButton Log=new JRadioButton("Request Logistics");
+                     Log.setForeground(Color.GREEN);Log.setBackground(Color.BLACK);
+                     Log.setActionCommand("Log");//Log.addActionListener();
+                     JRadioButton lev=new JRadioButton("Request Leave");
+                     lev.setForeground(Color.GREEN);lev.setBackground(Color.BLACK);
+                     lev.setActionCommand("lev");//lev.addActionListener();
+                     JRadioButton Status=new JRadioButton("Work Status");
+                     Status.setForeground(Color.GREEN);Status.setBackground(Color.BLACK);
+                     Status.setActionCommand("Status");//Status.addActionListener();
+
+                     JRadioButton Gen_rep=new JRadioButton("Generate Report");
+                     Gen_rep.setForeground(Color.GREEN);Gen_rep.setBackground(Color.BLACK);
+                     Gen_rep.setActionCommand("Gen_rep");//Gen_rep.addActionListener();
+
+                     JButton Logout=new JButton("Logout");
+                     Logout.setForeground(Color.blue);Logout.setBackground(Color.CYAN);
+                     Logout.setActionCommand("Logout");Logout.addActionListener(new Action7());
+                     panel25.add(Log);panel25.add(lev);
+                     panel25.add(Status);panel25.add(Gen_rep);
+                     panel25.add(Logout);
+                     frame1.add(panel25);
+                     frame1.setVisible(true);
+                 }
+
+             }
+
+         }
+
+         class Action19 implements ActionListener{
+             @Override
+             public void actionPerformed(ActionEvent e){
+                 frame1.getContentPane().removeAll();
+                 frame1.repaint();
+                 String command = e.getActionCommand();
+                 if(command.equals("Back")){
+                     frame1.setSize(500, 300);
+                     frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                     JPanel panel25=new JPanel();
+                     panel25.setBackground(Color.BLACK);
+                     JLabel label25=new JLabel();
+                     label25.setText("                             Staff                       ");
+                     Font myFont = new Font("Comic Sans MS", Font.PLAIN, 20);
+                     label25.setFont(myFont);
+                     label25.setForeground(Color.CYAN);
+                     panel25.add(label25);
+                     JRadioButton Log=new JRadioButton("Request Logistics");
+                     Log.setForeground(Color.GREEN);Log.setBackground(Color.BLACK);
+                     Log.setActionCommand("Log");//Log.addActionListener();
+                     JRadioButton lev=new JRadioButton("Request Leave");
+                     lev.setForeground(Color.GREEN);lev.setBackground(Color.BLACK);
+                     lev.setActionCommand("lev");//lev.addActionListener();
+                     JRadioButton Status=new JRadioButton("Work Status");
+                     Status.setForeground(Color.GREEN);Status.setBackground(Color.BLACK);
+                     Status.setActionCommand("Status");//Status.addActionListener();
+
+                     JRadioButton Gen_rep=new JRadioButton("Generate Report");
+                     Gen_rep.setForeground(Color.GREEN);Gen_rep.setBackground(Color.BLACK);
+                     Gen_rep.setActionCommand("Gen_rep");//Gen_rep.addActionListener();
+
+                     JButton Logout=new JButton("Logout");
+                     Logout.setForeground(Color.blue);Logout.setBackground(Color.CYAN);
+                     Logout.setActionCommand("Logout");Logout.addActionListener(new Action7());
+                     panel25.add(Log);panel25.add(lev);
+                     panel25.add(Status);panel25.add(Gen_rep);
+                     panel25.add(Logout);
+                     frame1.add(panel25);
+                     frame1.setVisible(true);
+
+                 }
+
+             }
+
          }
 
      }
