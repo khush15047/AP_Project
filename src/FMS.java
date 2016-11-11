@@ -1199,7 +1199,7 @@ public class FMS extends JFrame {
                      JButton back=new JButton("Back");
                      back.setActionCommand("Back");back.addActionListener(new Action19());
                      back.setBackground(Color.green);back.setForeground(Color.blue);
-                     JButton submit=new JButton("Submit");
+                     JButton submit=new JButton("Request");
                      submit.setActionCommand("submit");//submit.addActionListener();
                      submit.setBackground(Color.green);submit.setForeground(Color.blue);
                      panel26.add(submit);
@@ -1418,8 +1418,12 @@ public class FMS extends JFrame {
                     com.setText("Comment:");com.setForeground(Color.GREEN);panel50.add(com);
 
                     JTextField F3=new JTextField(35);
-                    F3.setBackground(Color.BLACK);F3.setForeground(Color.GREEN);
-                    panel50.add(F3);
+                    F3.setBackground(Color.BLACK);F3.setForeground(Color.GREEN);panel50.add(F3);
+
+                    JButton submit =new JButton("Submit");
+                    submit.setBackground(Color.green);submit.setForeground(Color.BLUE);
+                    submit.setActionCommand("submit");//submit.addActionListener();
+                    panel50.add(submit);
 
                     JButton back=new JButton("Back");
                     back.setBackground(Color.green);back.setForeground(Color.BLUE);
