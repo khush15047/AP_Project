@@ -1421,6 +1421,10 @@ public class FMS extends JFrame {
                     F3.setBackground(Color.BLACK);F3.setForeground(Color.GREEN);
                     panel50.add(F3);
 
+                    JButton back=new JButton("Back");
+                    back.setBackground(Color.green);back.setForeground(Color.BLUE);
+                    back.setActionCommand("Back");back.addActionListener(new Action19());panel50.add(back);
+
                     frame1.add(panel50);
                     frame1.setVisible(true);
 
@@ -1428,6 +1432,8 @@ public class FMS extends JFrame {
                 }
             }
         }
+
+
 
      }
 
