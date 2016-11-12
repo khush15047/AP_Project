@@ -101,7 +101,7 @@ public class FMS extends JFrame {
                 Back.setForeground(Color.BLUE);
                 panel2.add(Back);
                 Login2.setActionCommand("Login2");
-                Login2.addActionListener(new Action18());
+                Login2.addActionListener(new Action13());
 
                 Back.setActionCommand("cancel2");
                 Back.addActionListener(new Action6());
@@ -833,7 +833,7 @@ public class FMS extends JFrame {
              one.addActionListener(new Action14());
              two.addActionListener(new Action16());
              //three.addActionListener(new Action7());
-             four.addActionListener(new Action26());
+             four.addActionListener(new Action25());
              logout.addActionListener(new Action7());
          }
 
@@ -953,7 +953,7 @@ public class FMS extends JFrame {
              one.addActionListener(new Action14());
              two.addActionListener(new Action16());
              //three.addActionListener(new Action7());
-             four.addActionListener(new Action26());
+             four.addActionListener(new Action25());
              logout.addActionListener(new Action7());
          }
 
@@ -1083,7 +1083,7 @@ public class FMS extends JFrame {
                  one.addActionListener(new Action14());
                  two.addActionListener(new Action16());
                  //three.addActionListener(new Action7());
-                 four.addActionListener(new Action26());
+                 four.addActionListener(new Action25());
                  logout.addActionListener(new Action7());
              }
 
@@ -1247,7 +1247,7 @@ public class FMS extends JFrame {
                     panel40.setBackground(Color.BLACK);
 
                     JLabel label40=new JLabel();
-                    label40.setText("                                     Report Status                                           ");
+                    label40.setText("                                     Work Status                                           ");
                     Font myFont = new Font("Comic Sans MS", Font.PLAIN, 25);
                     label40.setFont(myFont);
                     label40.setForeground(Color.CYAN);
@@ -1303,7 +1303,7 @@ public class FMS extends JFrame {
                     panel40.setBackground(Color.BLACK);
 
                     JLabel label40=new JLabel();
-                    label40.setText("                                     Report Status                                           ");
+                    label40.setText("                                     Work Status                                           ");
                     Font myFont = new Font("Comic Sans MS", Font.PLAIN, 25);
                     label40.setFont(myFont);
                     label40.setForeground(Color.CYAN);
@@ -1360,7 +1360,7 @@ public class FMS extends JFrame {
                     panel40.setBackground(Color.BLACK);
 
                     JLabel label40=new JLabel();
-                    label40.setText("                                     Report Status                                           ");
+                    label40.setText("                                     Work Status                                           ");
                     Font myFont = new Font("Comic Sans MS", Font.PLAIN, 25);
                     label40.setFont(myFont);
                     label40.setForeground(Color.CYAN);
@@ -1449,7 +1449,7 @@ public class FMS extends JFrame {
             }
         }
 
-        // Report page for admin
+        // Report page for supervisor
 
             class Action25 implements ActionListener{
                 @Override
@@ -1469,7 +1469,7 @@ public class FMS extends JFrame {
                         label60.setForeground(Color.CYAN);
                         JButton back=new JButton("Back");
                         back.setBackground(Color.green);back.setForeground(Color.BLUE);
-                        back.setActionCommand("Login2");back.addActionListener(new Action2());
+                        back.setActionCommand("Login2");back.addActionListener(new Action13());
                         panel60.add(label60);
                         panel60.add(back);
                         frame1.add(panel60);
@@ -1477,7 +1477,7 @@ public class FMS extends JFrame {
                     }
                 }
             }
-            // report page for supervisor
+            // report page for admin
             class Action26 implements ActionListener{
                 @Override
                 public void actionPerformed(ActionEvent e){
@@ -1496,7 +1496,7 @@ public class FMS extends JFrame {
                         label60.setForeground(Color.CYAN);
                         JButton back=new JButton("Back");
                         back.setBackground(Color.green);back.setForeground(Color.BLUE);
-                        back.setActionCommand("Login2");back.addActionListener(new Action13());
+                        back.setActionCommand("Login2");back.addActionListener(new Action2());
                         panel60.add(label60);
                         panel60.add(back);
                         frame1.add(panel60);
