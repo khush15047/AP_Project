@@ -1255,7 +1255,7 @@ public class FMS extends JFrame {
 
                     JRadioButton N_S=new JRadioButton("Not Started");
                     N_S.setForeground(Color.GREEN);N_S.setBackground(Color.BLACK);
-                    N_S.setActionCommand("ns");
+                    N_S.setActionCommand("ns");N_S.addActionListener(new Action28());
 
                     JRadioButton O_G=new JRadioButton("Ongoing");
                     O_G.setForeground(Color.GREEN);O_G.setBackground(Color.BLACK);
@@ -1311,7 +1311,7 @@ public class FMS extends JFrame {
 
                     JRadioButton N_S=new JRadioButton("Not Started");
                     N_S.setForeground(Color.GREEN);N_S.setBackground(Color.BLACK);
-                    N_S.setActionCommand("ns");
+                    N_S.setActionCommand("ns");N_S.addActionListener(new Action28());
 
                     JRadioButton O_G=new JRadioButton("Ongoing");
                     O_G.setForeground(Color.GREEN);O_G.setBackground(Color.BLACK);
@@ -1368,7 +1368,7 @@ public class FMS extends JFrame {
 
                     JRadioButton N_S=new JRadioButton("Not Started");
                     N_S.setForeground(Color.GREEN);N_S.setBackground(Color.BLACK);
-                    N_S.setActionCommand("ns");
+                    N_S.setActionCommand("ns");N_S.addActionListener(new Action28());
 
                     JRadioButton O_G=new JRadioButton("Ongoing");
                     O_G.setForeground(Color.GREEN);O_G.setBackground(Color.BLACK);
@@ -1560,7 +1560,50 @@ public class FMS extends JFrame {
             frame1.repaint();
             String command = e.getActionCommand();
             if(command.equals("ns")){
+                frame1.setSize(500, 300);
+                frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                JPanel panel40=new JPanel();
+                panel40.setBackground(Color.BLACK);
 
+                JLabel label40=new JLabel();
+                label40.setText("                                     Work Status                                           ");
+                Font myFont = new Font("Comic Sans MS", Font.PLAIN, 25);
+                label40.setFont(myFont);
+                label40.setForeground(Color.CYAN);
+                panel40.add(label40);
+
+                JRadioButton N_S=new JRadioButton("Not Started");
+                N_S.setForeground(Color.GREEN);N_S.setBackground(Color.BLACK);
+                N_S.setActionCommand("ns");N_S.addActionListener(new Action28());
+
+                JRadioButton O_G=new JRadioButton("Ongoing");
+                O_G.setForeground(Color.GREEN);O_G.setBackground(Color.BLACK);
+                O_G.setActionCommand("ns");O_G.addActionListener(new Action22());
+
+                JRadioButton C=new JRadioButton("Completed");
+                C.setForeground(Color.GREEN);C.setBackground(Color.BLACK);
+                C.setActionCommand("c");C.addActionListener(new Action23());
+
+                lev4=new JTextField(39);
+                lev4.setText("                                                        Not Started");
+                lev4.setBackground(Color.BLACK);lev4.setForeground(Color.GREEN);
+
+                JButton up=new JButton("Update");
+                up.setBackground(Color.green);up.setForeground(Color.BLUE);
+                up.setActionCommand("up");//up.addActionListener();
+
+                JButton back=new JButton("Back");
+                back.setBackground(Color.green);back.setForeground(Color.BLUE);
+                back.setActionCommand("Back");back.addActionListener(new Action19());
+
+                panel40.add(N_S);
+                panel40.add(O_G);
+                panel40.add(C);
+                panel40.add(lev4);
+                panel40.add(up);
+                panel40.add(back);
+                frame1.add(panel40);
+                frame1.setVisible(true);
 
             }
         }
