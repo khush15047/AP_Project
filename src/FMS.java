@@ -1603,7 +1603,7 @@ public class FMS extends JFrame {
                 panel40.add(up);
                 panel40.add(back);
                 frame1.add(panel40);
-                frame1.setVisible(true);
+                frame1.setVisible(true)
 
             }
         }
