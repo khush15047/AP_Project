@@ -101,7 +101,7 @@ public class FMS extends JFrame {
                 Back.setForeground(Color.BLUE);
                 panel2.add(Back);
                 Login2.setActionCommand("Login2");
-                Login2.addActionListener(new Action18());
+                Login2.addActionListener(new Action2());
 
                 Back.setActionCommand("cancel2");
                 Back.addActionListener(new Action6());
@@ -1259,7 +1259,7 @@ public class FMS extends JFrame {
 
                     JRadioButton O_G=new JRadioButton("Ongoing");
                     O_G.setForeground(Color.GREEN);O_G.setBackground(Color.BLACK);
-                    O_G.setActionCommand("ns");O_G.addActionListener(new Action22());
+                    O_G.setActionCommand("o");O_G.addActionListener(new Action22());
 
                     JRadioButton C=new JRadioButton("Completed");
                     C.setForeground(Color.GREEN);C.setBackground(Color.BLACK);
@@ -1270,11 +1270,11 @@ public class FMS extends JFrame {
                     lev4.setBackground(Color.BLACK);lev4.setForeground(Color.GREEN);
 
                     JButton up=new JButton("Update");
-                    up.setBackground(Color.green);up.setForeground(Color.BLUE);
+                    up.setBackground(Color.BLACK);up.setForeground(Color.GREEN);
                     up.setActionCommand("up");//up.addActionListener();
 
                     JButton back=new JButton("Back");
-                    back.setBackground(Color.green);back.setForeground(Color.BLUE);
+                    back.setBackground(Color.BLACK);back.setForeground(Color.GREEN);
                     back.setActionCommand("Back");back.addActionListener(new Action19());
 
                     panel40.add(N_S);
@@ -1296,7 +1296,7 @@ public class FMS extends JFrame {
                 frame1.getContentPane().removeAll();
                 frame1.repaint();
                 String command = e.getActionCommand();
-                if(command.equals("ns")){
+                if(command.equals("o")){
                     frame1.setSize(500, 300);
                     frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                     JPanel panel40=new JPanel();
@@ -1315,7 +1315,7 @@ public class FMS extends JFrame {
 
                     JRadioButton O_G=new JRadioButton("Ongoing");
                     O_G.setForeground(Color.GREEN);O_G.setBackground(Color.BLACK);
-                    O_G.setActionCommand("ns");O_G.addActionListener(new Action22());
+                    O_G.setActionCommand("o");O_G.addActionListener(new Action22());
 
                     JRadioButton C=new JRadioButton("Completed");
                     C.setForeground(Color.GREEN);C.setBackground(Color.BLACK);
@@ -1326,11 +1326,11 @@ public class FMS extends JFrame {
                     lev4.setBackground(Color.BLACK);lev4.setForeground(Color.GREEN);
 
                     JButton up=new JButton("Update");
-                    up.setBackground(Color.green);up.setForeground(Color.BLUE);
-                    up.setActionCommand("up");//up.addActionListener();
+                    up.setBackground(Color.BLACK);up.setForeground(Color.GREEN);
+                    up.setActionCommand("up");up.addActionListener(new Action30());
 
                     JButton back=new JButton("Back");
-                    back.setBackground(Color.green);back.setForeground(Color.BLUE);
+                    back.setBackground(Color.BLACK);back.setForeground(Color.GREEN);
                     back.setActionCommand("Back");back.addActionListener(new Action19());
 
                     panel40.add(N_S);
@@ -1372,7 +1372,7 @@ public class FMS extends JFrame {
 
                     JRadioButton O_G=new JRadioButton("Ongoing");
                     O_G.setForeground(Color.GREEN);O_G.setBackground(Color.BLACK);
-                    O_G.setActionCommand("ns");O_G.addActionListener(new Action22());
+                    O_G.setActionCommand("o");O_G.addActionListener(new Action22());
 
                     JRadioButton C=new JRadioButton("Completed");
                     C.setForeground(Color.GREEN);C.setBackground(Color.BLACK);
@@ -1384,11 +1384,11 @@ public class FMS extends JFrame {
                     lev4.setBackground(Color.BLACK);lev4.setForeground(Color.GREEN);
 
                     JButton up=new JButton("Update");
-                    up.setBackground(Color.green);up.setForeground(Color.BLUE);
-                    up.setActionCommand("up");//up.addActionListener();
+                    up.setBackground(Color.BLACK);up.setForeground(Color.GREEN);
+                    up.setActionCommand("up");up.addActionListener(new Action31());
 
                     JButton back=new JButton("Back");
-                    back.setBackground(Color.green);back.setForeground(Color.BLUE);
+                    back.setBackground(Color.BLACK);back.setForeground(Color.GREEN);
                     back.setActionCommand("Back");back.addActionListener(new Action19());
 
                     panel40.add(N_S);
@@ -1578,7 +1578,7 @@ public class FMS extends JFrame {
 
                 JRadioButton O_G=new JRadioButton("Ongoing");
                 O_G.setForeground(Color.GREEN);O_G.setBackground(Color.BLACK);
-                O_G.setActionCommand("ns");O_G.addActionListener(new Action22());
+                O_G.setActionCommand("o");O_G.addActionListener(new Action22());
 
                 JRadioButton C=new JRadioButton("Completed");
                 C.setForeground(Color.GREEN);C.setBackground(Color.BLACK);
@@ -1589,11 +1589,11 @@ public class FMS extends JFrame {
                 lev4.setBackground(Color.BLACK);lev4.setForeground(Color.GREEN);
 
                 JButton up=new JButton("Update");
-                up.setBackground(Color.green);up.setForeground(Color.BLUE);
-                up.setActionCommand("up");//up.addActionListener();
+                up.setBackground(Color.BLACK);up.setForeground(Color.GREEN);
+                up.setActionCommand("up");up.addActionListener(new Action29());
 
                 JButton back=new JButton("Back");
-                back.setBackground(Color.green);back.setForeground(Color.BLUE);
+                back.setBackground(Color.BLACK);back.setForeground(Color.GREEN);
                 back.setActionCommand("Back");back.addActionListener(new Action19());
 
                 panel40.add(N_S);
@@ -1603,13 +1603,209 @@ public class FMS extends JFrame {
                 panel40.add(up);
                 panel40.add(back);
                 frame1.add(panel40);
-                frame1.setVisible(true)
+                frame1.setVisible(true);
 
             }
         }
     }
+// update button for not started
+    class Action29 implements  ActionListener{
 
+        @Override
+        public void actionPerformed(ActionEvent e){
+            frame1.getContentPane().removeAll();
+            frame1.repaint();
+            String command = e.getActionCommand();
+            if(command.equals("up") ){
+
+                frame1.setSize(500, 300);
+                frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                JPanel panel40=new JPanel();
+                panel40.setBackground(Color.BLACK);
+
+                JLabel label40=new JLabel();
+                label40.setText("                                     Work Status                                           ");
+                Font myFont = new Font("Comic Sans MS", Font.PLAIN, 25);
+                label40.setFont(myFont);
+                label40.setForeground(Color.CYAN);
+                panel40.add(label40);
+
+                JRadioButton N_S=new JRadioButton("Not Started");
+                N_S.setForeground(Color.GREEN);N_S.setBackground(Color.BLACK);
+                N_S.setActionCommand("ns");N_S.addActionListener(new Action28());
+
+                JRadioButton O_G=new JRadioButton("Ongoing");
+                O_G.setForeground(Color.GREEN);O_G.setBackground(Color.BLACK);
+                O_G.setActionCommand("o");O_G.addActionListener(new Action22());
+
+                JRadioButton C=new JRadioButton("Completed");
+                C.setForeground(Color.GREEN);C.setBackground(Color.BLACK);
+                C.setActionCommand("c");C.addActionListener(new Action23());
+
+                lev4=new JTextField(39);
+                lev4.setText("                                                           Not Started");
+                lev4.setBackground(Color.BLACK);lev4.setForeground(Color.GREEN);
+
+                JButton up=new JButton("Update");
+                up.setBackground(Color.BLACK);up.setForeground(Color.GREEN);
+                up.setActionCommand("up");up.addActionListener(new Action29());
+
+                JButton back=new JButton("Back                                             ");
+                back.setBackground(Color.BLACK);back.setForeground(Color.GREEN);
+                back.setActionCommand("Back");back.addActionListener(new Action19());
+
+                JLabel label69=new JLabel();
+                label69.setForeground(Color.CYAN);
+                label69.setText("Work Status Updated!");
+                Font uFont = new Font("Comic Sans MS", Font.PLAIN, 25);
+
+                label69.setFont(uFont);
+
+
+                panel40.add(N_S);
+                panel40.add(O_G);
+                panel40.add(C);
+                panel40.add(lev4);
+                panel40.add(up);
+                panel40.add(back);panel40.add(label69);
+                frame1.add(panel40);
+                frame1.setVisible(true);
+            }
+
+        }
+
+    }
+
+    //update for ongoing
+
+     class Action30 implements ActionListener{
+         @Override
+         public void actionPerformed(ActionEvent e){
+             frame1.getContentPane().removeAll();
+             frame1.repaint();
+             String command = e.getActionCommand();
+             if(command.equals("up") ){
+
+                 frame1.setSize(500, 300);
+                 frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                 JPanel panel40=new JPanel();
+                 panel40.setBackground(Color.BLACK);
+
+                 JLabel label40=new JLabel();
+                 label40.setText("                                     Work Status                                           ");
+                 Font myFont = new Font("Comic Sans MS", Font.PLAIN, 25);
+                 label40.setFont(myFont);
+                 label40.setForeground(Color.CYAN);
+                 panel40.add(label40);
+
+                 JRadioButton N_S=new JRadioButton("Not Started");
+                 N_S.setForeground(Color.GREEN);N_S.setBackground(Color.BLACK);
+                 N_S.setActionCommand("ns");N_S.addActionListener(new Action28());
+
+                 JRadioButton O_G=new JRadioButton("Ongoing");
+                 O_G.setForeground(Color.GREEN);O_G.setBackground(Color.BLACK);
+                 O_G.setActionCommand("o");O_G.addActionListener(new Action22());
+
+                 JRadioButton C=new JRadioButton("Completed");
+                 C.setForeground(Color.GREEN);C.setBackground(Color.BLACK);
+                 C.setActionCommand("c");C.addActionListener(new Action23());
+
+                 lev4=new JTextField(39);
+                 lev4.setText("                                                           Ongoing");
+                 lev4.setBackground(Color.BLACK);lev4.setForeground(Color.GREEN);
+
+                 JButton up=new JButton("Update");
+                 up.setBackground(Color.BLACK);up.setForeground(Color.GREEN);
+                 up.setActionCommand("up");up.addActionListener(new Action30());
+
+                 JButton back=new JButton("Back                                          ");
+                 back.setBackground(Color.BLACK);back.setForeground(Color.GREEN);
+                 back.setActionCommand("Back");back.addActionListener(new Action19());
+
+                 JLabel label69=new JLabel();
+                 label69.setForeground(Color.CYAN);
+                 label69.setText("Work Status Updated!");
+                 Font uFont = new Font("Comic Sans MS", Font.PLAIN, 25);
+                 label69.setFont(uFont);
+
+                 panel40.add(N_S);
+                 panel40.add(O_G);
+                 panel40.add(C);
+                 panel40.add(lev4);
+                 panel40.add(up);
+                 panel40.add(back);panel40.add(label69);
+                 frame1.add(panel40);
+                 frame1.setVisible(true);
+             }
+
+         }
      }
+
+     // update botton for completed
+
+    class Action31 implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent e){
+            frame1.getContentPane().removeAll();
+            frame1.repaint();
+            String command = e.getActionCommand();
+            if(command.equals("up") ){
+
+                frame1.setSize(500, 300);
+                frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                JPanel panel40=new JPanel();
+                panel40.setBackground(Color.BLACK);
+
+                JLabel label40=new JLabel();
+                label40.setText("                                     Work Status                                           ");
+                Font myFont = new Font("Comic Sans MS", Font.PLAIN, 25);
+                label40.setFont(myFont);
+                label40.setForeground(Color.CYAN);
+                panel40.add(label40);
+
+                JRadioButton N_S=new JRadioButton("Not Started");
+                N_S.setForeground(Color.GREEN);N_S.setBackground(Color.BLACK);
+                N_S.setActionCommand("ns");N_S.addActionListener(new Action28());
+
+                JRadioButton O_G=new JRadioButton("Ongoing");
+                O_G.setForeground(Color.GREEN);O_G.setBackground(Color.BLACK);
+                O_G.setActionCommand("o");O_G.addActionListener(new Action22());
+
+                JRadioButton C=new JRadioButton("Completed");
+                C.setForeground(Color.GREEN);C.setBackground(Color.BLACK);
+                C.setActionCommand("c");C.addActionListener(new Action23());
+
+                lev4=new JTextField(39);
+                lev4.setText("                                                           Completed");
+                lev4.setBackground(Color.BLACK);lev4.setForeground(Color.GREEN);
+
+                JButton up=new JButton("Update");
+                up.setBackground(Color.BLACK);up.setForeground(Color.GREEN);
+                up.setActionCommand("up");up.addActionListener(new Action31());
+
+                JButton back=new JButton("Back                                          ");
+                back.setBackground(Color.BLACK);back.setForeground(Color.GREEN);
+                back.setActionCommand("Back");back.addActionListener(new Action19());
+
+                JLabel label69=new JLabel();
+                label69.setForeground(Color.CYAN);
+                label69.setText("Work Status Updated!");
+                Font uFont = new Font("Comic Sans MS", Font.PLAIN, 25);
+                label69.setFont(uFont);
+
+                panel40.add(N_S);
+                panel40.add(O_G);
+                panel40.add(C);
+                panel40.add(lev4);
+                panel40.add(up);
+                panel40.add(back);panel40.add(label69);
+                frame1.add(panel40);
+                frame1.setVisible(true);
+            }
+
+        }
+    }
+      }
 
 
 
