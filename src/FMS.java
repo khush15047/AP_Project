@@ -103,7 +103,7 @@ public class FMS extends JFrame {
                 Back.setForeground(Color.BLUE);
                 panel2.add(Back);
                 Login2.setActionCommand("Login2");
-                Login2.addActionListener(new Action2());
+                Login2.addActionListener(new Action18());
 
                 Back.setActionCommand("cancel2");
                 Back.addActionListener(new Action6());
