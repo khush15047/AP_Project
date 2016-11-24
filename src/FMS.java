@@ -25,6 +25,7 @@ public class FMS extends JFrame {
         frame1 = new JFrame("FMS");
         frame1.setSize(500, 300);
         frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame1.setResizable(false);
         JPanel panel1 = new JPanel();
         JLabel label1 = new JLabel();
         label1.setText("Facility Management Services System");
