@@ -72,6 +72,7 @@ public class FMS extends JFrame {
         public void actionPerformed(ActionEvent e) {
             frame1.getContentPane().removeAll();
             frame1.repaint();
+            frame1.setResizable(false);
             String command = e.getActionCommand();
             if (command.equals("Login")) {
                 JPanel panel2 = new JPanel();
@@ -118,6 +119,7 @@ public class FMS extends JFrame {
         public void actionPerformed(ActionEvent e) {
             frame1.getContentPane().removeAll();
             frame1.repaint();
+            frame1.setResizable(false);
             String command = e.getActionCommand();
             if (command.equals("Register")) {
                 JPanel panel2 = new JPanel();
@@ -221,6 +223,7 @@ public class FMS extends JFrame {
         public void actionPerformed(ActionEvent e) {
             frame1.getContentPane().removeAll();
             frame1.repaint();
+            frame1.setResizable(false);
             String command = e.getActionCommand();
             if (command.equals("Login2")) {
                 Text1 = text_log.getText();//getting input from Username
@@ -286,6 +289,7 @@ public class FMS extends JFrame {
         public void actionPerformed(ActionEvent e) {
             frame1.getContentPane().removeAll();
             frame1.repaint();
+            frame1.setResizable(false);
             String command = e.getActionCommand();
             if (command.equals("submit")) {
                 t3 = textField1.getText();//getting input from ID
@@ -334,6 +338,7 @@ public class FMS extends JFrame {
         public void actionPerformed(ActionEvent e) {
             frame1.getContentPane().removeAll();
             frame1.repaint();
+            frame1.setResizable(false);
             String command = e.getActionCommand();
             if (command.equals("Home")) {
                 frame1.setSize(500, 300);
@@ -380,6 +385,7 @@ public class FMS extends JFrame {
         public void actionPerformed(ActionEvent e) {
             frame1.getContentPane().removeAll();
             frame1.repaint();
+            frame1.setResizable(false);
             String command = e.getActionCommand();
             if (command.equals("cancel2")) {
                 frame1.setSize(500, 300);
@@ -425,6 +431,7 @@ public class FMS extends JFrame {
         public void actionPerformed(ActionEvent e) {
             frame1.getContentPane().removeAll();
             frame1.repaint();
+            frame1.setResizable(false);
             String command = e.getActionCommand();
             if (command.equals("Logout")) {
                 frame1.setSize(500, 300);
@@ -461,6 +468,7 @@ public class FMS extends JFrame {
         public void actionPerformed(ActionEvent e) {
             frame1.getContentPane().removeAll();
             frame1.repaint();
+            frame1.setResizable(false);
             String command = e.getActionCommand();
             if (command.equals("cancel3")) {
                 frame1.setSize(500, 300);
@@ -506,6 +514,7 @@ public class FMS extends JFrame {
         public void actionPerformed(ActionEvent e) {
             frame1.getContentPane().removeAll();
             frame1.repaint();
+            frame1.setResizable(false);
             String command = e.getActionCommand();
             if (command.equals("Staff")) {
                 frame1.setSize(500, 300);
@@ -597,6 +606,7 @@ public class FMS extends JFrame {
         public void actionPerformed(ActionEvent e) {
             frame1.getContentPane().removeAll();
             frame1.repaint();
+            frame1.setResizable(false);
             String command = e.getActionCommand();
             if (command.equals("fi")) {
                 Text1 = text_log.getText();//getting input from Username
@@ -661,6 +671,7 @@ public class FMS extends JFrame {
         public void actionPerformed(ActionEvent e) {
             frame1.getContentPane().removeAll();
             frame1.repaint();
+            frame1.setResizable(false);
             String command = e.getActionCommand();
             if (command.equals("Home")) {
                 frame1.setSize(500, 300);
@@ -708,6 +719,7 @@ public class FMS extends JFrame {
         public void actionPerformed(ActionEvent e){
             frame1.getContentPane().removeAll();
             frame1.repaint();
+            frame1.setResizable(false);
             String command = e.getActionCommand();
             if (command.equals("Back")){
                 Text1 = text_log.getText();//getting input from Usernam
@@ -770,6 +782,7 @@ public class FMS extends JFrame {
          public void actionPerformed(ActionEvent e){
              frame1.getContentPane().removeAll();
              frame1.repaint();
+             frame1.setResizable(false);
              String command = e.getActionCommand();
              if(command.equals("Login2")){
                  frame1.setSize(500, 300);
@@ -849,6 +862,7 @@ public class FMS extends JFrame {
          public void actionPerformed(ActionEvent e) {
              frame1.getContentPane().removeAll();
              frame1.repaint();
+             frame1.setResizable(false);
              String command = e.getActionCommand();
              if (command.equals("Home")) {
                  frame1.setSize(500, 300);
@@ -892,6 +906,7 @@ public class FMS extends JFrame {
          public void actionPerformed(ActionEvent e){
              frame1.getContentPane().removeAll();
              frame1.repaint();
+             frame1.setResizable(false);
              String command = e.getActionCommand();
              if(command.equals("Back")){
                  frame1.setSize(500, 300);
@@ -965,6 +980,7 @@ public class FMS extends JFrame {
              public void actionPerformed(ActionEvent e) {
                  frame1.getContentPane().removeAll();
                  frame1.repaint();
+             frame1.setResizable(false);
                  String command = e.getActionCommand();
                  if (command.equals("Staff")) {
                      frame1.setSize(500, 300);
@@ -1023,6 +1039,7 @@ public class FMS extends JFrame {
              public void actionPerformed(ActionEvent e){
                  frame1.getContentPane().removeAll();
                  frame1.repaint();
+                 frame1.setResizable(false);
                  String command = e.getActionCommand();
                  if(command.equals("fi")){
                      frame1.setSize(500, 300);
@@ -1095,6 +1112,7 @@ public class FMS extends JFrame {
              public void actionPerformed(ActionEvent e){
                  frame1.getContentPane().removeAll();
                  frame1.repaint();
+                 frame1.setResizable(false);
                  String command = e.getActionCommand();
                  if(command.equals("Login2")){
                      frame1.setSize(500, 300);
@@ -1148,6 +1166,7 @@ public class FMS extends JFrame {
              public void actionPerformed(ActionEvent e){
                  frame1.getContentPane().removeAll();
                  frame1.repaint();
+                 frame1.setResizable(false);
                  String command = e.getActionCommand();
                  if(command.equals("Back")){
                      frame1.setSize(500, 300);
@@ -1194,6 +1213,7 @@ public class FMS extends JFrame {
              public void actionPerformed(ActionEvent e){
                  frame1.getContentPane().removeAll();
                  frame1.repaint();
+                 frame1.setResizable(false);
                  String command = e.getActionCommand();
                  if(command.equals("lev")){
                      frame1.setSize(500, 300);
