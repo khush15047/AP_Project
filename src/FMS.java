@@ -6,14 +6,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
+
 /**
  *
  * @author khushvinder
  */
 public class FMS extends JFrame {
     private JFrame frame1, frame2, frame3, frame4;
+    private ImageIcon image;
     private JPanel panel1, panel2, panel3, panel4;
-    private JLabel label1, label2, head, head2, head3, name1, name2, name3, name4, label4, label5, label6, label7, label8, label9, label10, label11, lab_log, lab_pass;
+    private JLabel label1,labelimg ,label2, head, head2, head3, name1, name2, name3, name4, label4, label5, label6, label7, label8, label9, label10, label11, lab_log, lab_pass;
     private JButton Login, fi, logout, submit, cancel, Exit, B_Home, Exit1, cancel2;
     private JButton Register, Login2;
     JRadioButton one, two, three, four,levish;
@@ -28,12 +30,14 @@ public class FMS extends JFrame {
         frame1.setResizable(false);
         JPanel panel1 = new JPanel();
         JLabel label1 = new JLabel();
+
         label1.setText("Facility Management Services System");
         Font myFont = new Font("Comic Sans MS", Font.PLAIN, 27);
         label1.setFont(myFont);
         panel1.setBackground(Color.BLACK);
         label1.setForeground(Color.CYAN);
         panel1.add(label1);
+       labelimg.setIcon(new ImageIcon("C:\\Users\\khushvinder\\Documents\\k.png"));
         JButton Login = new JButton("Login");
         Login.setBackground(Color.GREEN);
         Login.setForeground(Color.BLUE);
@@ -47,8 +51,11 @@ public class FMS extends JFrame {
         Exit.setBackground(Color.GREEN);
         Exit.setForeground(Color.BLUE);
         panel1.add(Exit);
+        panel1.add(labelimg);
         frame1.add(panel1);
+     //   frame1.validate();
         frame1.setVisible(true);
+
         Login.setActionCommand("Login");
         Login.addActionListener(new Action1());
 
