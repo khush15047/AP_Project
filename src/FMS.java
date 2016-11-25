@@ -53,7 +53,7 @@ public class FMS extends JFrame {
         panel1.add(Exit);
         panel1.add(labelimg);
         frame1.add(panel1);
-     //   frame1.validate();
+        frame1.validate();
         frame1.setVisible(true);
 
         Login.setActionCommand("Login");
