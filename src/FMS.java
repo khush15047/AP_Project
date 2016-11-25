@@ -32,7 +32,7 @@ public class FMS extends JFrame {
         Font myFont = new Font("Comic Sans MS", Font.PLAIN, 27);
         label1.setFont(myFont);
         panel1.setBackground(Color.BLACK);
-        label1.setForeground(Color.GREEN);
+        label1.setForeground(Color.CYAN);
         panel1.add(label1);
         JButton Login = new JButton("Login");
         Login.setBackground(Color.GREEN);
@@ -103,7 +103,7 @@ public class FMS extends JFrame {
                 Back.setForeground(Color.BLUE);
                 panel2.add(Back);
                 Login2.setActionCommand("Login2");
-                Login2.addActionListener(new Action18());
+                Login2.addActionListener(new Action2());
 
                 Back.setActionCommand("cancel2");
                 Back.addActionListener(new Action6());
@@ -396,7 +396,7 @@ public class FMS extends JFrame {
                 Font myFont = new Font("Comic Sans MS", Font.PLAIN, 27);
                 label1.setFont(myFont);
                 panel1.setBackground(Color.BLACK);
-                label1.setForeground(Color.GREEN);
+                label1.setForeground(Color.CYAN);
                 panel1.add(label1);
                 JButton Login = new JButton("Login");
                 Login.setBackground(Color.GREEN);
@@ -479,7 +479,7 @@ public class FMS extends JFrame {
                 Font myFont = new Font("Comic Sans MS", Font.PLAIN, 27);
                 label1.setFont(myFont);
                 panel1.setBackground(Color.BLACK);
-                label1.setForeground(Color.GREEN);
+                label1.setForeground(Color.CYAN);
                 panel1.add(label1);
                 JButton Login = new JButton("Login");
                 Login.setBackground(Color.GREEN);
