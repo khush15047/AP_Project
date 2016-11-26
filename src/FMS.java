@@ -37,7 +37,7 @@ public class FMS extends JFrame {
         panel1.setBackground(Color.BLACK);
         label1.setForeground(Color.CYAN);
         panel1.add(label1);
-       labelimg.setIcon(new ImageIcon("C:\\Users\\khushvinder\\Documents\\k.png"));
+     //  labelimg.setIcon(new ImageIcon("C:\\Users\\khushvinder\\Documents\\k.png"));
         JButton Login = new JButton("Login");
         Login.setBackground(Color.GREEN);
         Login.setForeground(Color.BLUE);
@@ -51,7 +51,7 @@ public class FMS extends JFrame {
         Exit.setBackground(Color.GREEN);
         Exit.setForeground(Color.BLUE);
         panel1.add(Exit);
-        panel1.add(labelimg);
+    //    panel1.add(labelimg);
         frame1.add(panel1);
         frame1.validate();
         frame1.setVisible(true);
@@ -110,7 +110,7 @@ public class FMS extends JFrame {
                 Back.setForeground(Color.BLUE);
                 panel2.add(Back);
                 Login2.setActionCommand("Login2");
-                Login2.addActionListener(new Action2());
+                Login2.addActionListener(new Action13());
 
                 Back.setActionCommand("cancel2");
                 Back.addActionListener(new Action6());
