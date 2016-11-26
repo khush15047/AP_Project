@@ -75,6 +75,9 @@ public class FMS extends JFrame {
     }
 
     class Action1 implements ActionListener {
+
+
+
         @Override
         public void actionPerformed(ActionEvent e) {
             frame1.getContentPane().removeAll();
@@ -88,7 +91,7 @@ public class FMS extends JFrame {
                 head.setText("     USER LOGIN     ");
                 Font myFont = new Font("Comic Sans MS", Font.PLAIN, 65);
                 head.setFont(myFont);
-                head.setForeground(Color.GREEN);
+                head.setForeground(Color.CYAN);
                 panel2.add(head);
                 lab_log = new JLabel("USERNAME");
                 lab_log.setForeground(Color.GREEN);
@@ -224,6 +227,7 @@ public class FMS extends JFrame {
         }
 
     }
+
 
     class Action2 implements ActionListener {
         @Override
@@ -1841,6 +1845,12 @@ public class FMS extends JFrame {
                 frame1.add(panel40);
                 frame1.setVisible(true);
             }
+
+        }
+    }
+    class Action32 implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent e){
 
         }
     }
