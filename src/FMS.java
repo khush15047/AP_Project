@@ -1851,7 +1851,9 @@ public class FMS extends JFrame {
     class Action32 implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e){
-
+            frame1.getContentPane().removeAll();
+            frame1.repaint();
+            frame1.setResizable(false);
         }
     }
       }
