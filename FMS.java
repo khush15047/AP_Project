@@ -1889,7 +1889,7 @@ public class FMS extends JFrame {
     }
 
     //leave page for admin
-   /* class Action33 implements ActionListener{
+    class Action33 implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e){
             frame1.getContentPane().removeAll();
@@ -1918,7 +1918,7 @@ public class FMS extends JFrame {
                 frame1.add(panel100);
                 frame1.setVisible(true);
             }
-        }*/
+        }
 
     }
 
